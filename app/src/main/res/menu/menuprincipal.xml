@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/suerteFragment"
+        android:title="@string/Suerte"
+        android:icon="@drawable/ic_verificar" />
+
+    <item
+        android:id="@+id/oroscoposuFragment"
+        android:icon="@drawable/hogar"
+        android:title="@string/Oroscopo" />
+    <item
+        android:id="@+id/lecturaDePalmasFragment"
+        android:title="@string/LecturaPalmas"
+        android:icon="@drawable/ic_menu"/>
+
+</menu>
