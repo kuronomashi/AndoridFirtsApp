@@ -20,6 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/app_name"
+            android:fontFamily="@font/inter_medium"
             android:textStyle="bold"
             android:textSize="25sp"
             android:layout_gravity="center"
@@ -46,13 +47,14 @@
         android:layout_width="0dp"
         android:layout_height="70dp"
         android:background="@color/Futatsu"
+        android:textAlignment="textStart"
+        app:itemActiveIndicatorStyle="@null"
         app:itemIconTint="@color/navegacioncolorselccion"
-        app:itemTextColor="@color/navegacioncolorselccion"
         app:itemPaddingBottom="12dp"
+        app:itemTextColor="@color/navegacioncolorselccion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:itemActiveIndicatorStyle="@null"
         app:menu="@menu/menuprincipal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

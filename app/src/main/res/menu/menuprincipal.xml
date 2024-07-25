@@ -4,7 +4,8 @@
     <item
         android:id="@+id/suerteFragment"
         android:title="@string/Suerte"
-        android:icon="@drawable/ic_verificar" />
+        android:icon="@drawable/ic_verificar"
+        />
 
     <item
         android:id="@+id/oroscoposuFragment"
