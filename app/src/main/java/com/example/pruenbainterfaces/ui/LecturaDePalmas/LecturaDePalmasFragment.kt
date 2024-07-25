@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import com.example.pruenbainterfaces.R
 import com.example.pruenbainterfaces.databinding.FragmentLecturaDePalmasBinding
 import com.example.pruenbainterfaces.databinding.FragmentSuerteBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LecturaDePalmasFragment : Fragment() {
 
     private var _binding: FragmentLecturaDePalmasBinding? = null
