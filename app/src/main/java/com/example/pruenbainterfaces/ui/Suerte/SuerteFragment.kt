@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.pruenbainterfaces.R
 import com.example.pruenbainterfaces.databinding.FragmentSuerteBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SuerteFragment : Fragment() {
 
     private var _binding: FragmentSuerteBinding? = null

@@ -50,4 +50,21 @@
     <string name="LecturaPalmas">LecturaPalmas</string>
     <string name="Suerte">Suertee</string>
 
+    <!-- Textos Nombres Caballeros del zodiaco -->
+
+    <string name="Aries">Aries</string>
+    <string name="Tauro">Tauro</string>
+    <string name="Geminis">Geminis</string>
+    <string name="Cancer">Cancer</string>
+    <string name="Leo">Leo</string>
+    <string name="Virgo">Virgo</string>
+    <string name="Libra">Libra</string>
+    <string name="Escorpio">Escorpio</string>
+    <string name="Sagitario">Sagitario</string>
+    <string name="Capricornio">Capricornio</string>
+    <string name="Acuario">Acuario</string>
+    <string name="Piscis">Piscis</string>
+
+
+
 </resources>
