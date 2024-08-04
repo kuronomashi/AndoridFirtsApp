@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.pruenbainterfaces.Dominio.model.oroscopuesinformation
 import com.example.pruenbainterfaces.R
 
-class orcopusadaptater(private var ListaHoroscopo:List<oroscopuesinformation> = emptyList()):
+class orcopusadaptater(private var ListaHoroscopo:List<oroscopuesinformation> = emptyList(), private val onItemSelected:(oroscopuesinformation) -> Unit):
     RecyclerView.Adapter<orcopusViewHolder>() {
 
     fun ActualizarInformacion(list: List<oroscopuesinformation>){
@@ -25,6 +25,6 @@ class orcopusadaptater(private var ListaHoroscopo:List<oroscopuesinformation> = 
 
 
     override fun onBindViewHolder(holder: orcopusViewHolder, position: Int) {
-        holder.render(ListaHoroscopo[position])
+        holder.render(ListaHoroscopo[position],onItemSelected)
     }
 }

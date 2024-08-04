@@ -9,39 +9,29 @@
         android:id="@+id/lecturaDePalmasFragment"
         android:name="com.example.pruenbainterfaces.ui.LecturaDePalmas.LecturaDePalmasFragment"
         android:label="fragment_lectura_de_palmas"
-        tools:layout="@layout/fragment_lectura_de_palmas" >
-        <action
-            android:id="@+id/action_lecturaDePalmasFragment_to_oroscoposuFragment"
-            app:destination="@id/oroscoposuFragment" />
-        <action
-            android:id="@+id/action_lecturaDePalmasFragment_to_oroscoposuFragment2"
-            app:destination="@id/oroscoposuFragment" />
-        <action
-            android:id="@+id/action_lecturaDePalmasFragment_to_suerteFragment"
-            app:destination="@id/suerteFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_lectura_de_palmas" />
     <fragment
         android:id="@+id/oroscoposuFragment"
-        android:name="com.example.pruenbainterfaces.ui.Primerapagina.OroscoposuFragment"
+        android:name="com.example.pruenbainterfaces.ui.Primerapagina.HoroscopeFragment"
         android:label="fragment_oroscoposu"
         tools:layout="@layout/fragment_oroscoposu" >
         <action
-            android:id="@+id/action_oroscoposuFragment_to_lecturaDePalmasFragment"
-            app:destination="@id/lecturaDePalmasFragment" />
-        <action
-            android:id="@+id/action_oroscoposuFragment_to_suerteFragment"
-            app:destination="@id/suerteFragment" />
+            android:id="@+id/action_oroscoposuFragment_to_horoscopoDetailActivity"
+            app:destination="@id/horoscopoDetailActivity" />
     </fragment>
     <fragment
         android:id="@+id/suerteFragment"
         android:name="com.example.pruenbainterfaces.ui.Suerte.SuerteFragment"
         android:label="fragment_suerte"
-        tools:layout="@layout/fragment_suerte" >
-        <action
-            android:id="@+id/action_suerteFragment_to_lecturaDePalmasFragment"
-            app:destination="@id/lecturaDePalmasFragment" />
-        <action
-            android:id="@+id/action_suerteFragment_to_oroscoposuFragment"
-            app:destination="@id/oroscoposuFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_suerte" />
+    <activity
+        android:id="@+id/horoscopoDetailActivity"
+        android:name="com.example.pruenbainterfaces.ui.detalleH.HoroscopoDetailActivity"
+        android:label="activity_horoscopo_detail"
+        tools:layout="@layout/activity_horoscopo_detail" >
+        <argument
+            android:name="inf"
+            app:argType="com.example.pruenbainterfaces.Dominio.model.HoroscopoModelo"
+            android:defaultValue="Aries" />
+    </activity>
 </navigation>
