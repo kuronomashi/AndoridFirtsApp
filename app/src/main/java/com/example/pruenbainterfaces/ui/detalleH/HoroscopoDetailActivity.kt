@@ -6,12 +6,16 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.navArgs
 import com.example.pruenbainterfaces.R
 import com.example.pruenbainterfaces.databinding.ActivityHoroscopoDetailBinding
 import com.example.pruenbainterfaces.databinding.ActivityMainBinding
 import com.example.pruenbainterfaces.ui.Primerapagina.HoroscopeFragmentDirections
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class HoroscopoDetailActivity : AppCompatActivity() {
@@ -25,8 +29,36 @@ class HoroscopoDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHoroscopoDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        args.inf
-
+        initUI()
         }
+
+    private fun initUI() {
+        initUIState()
+    }
+
+    private  fun initUIState(){
+        lifecycleScope.launch {
+           repeatOnLifecycle(Lifecycle.State.STARTED){
+               HoroscopeDetailViewModel.State.collect{
+                   when(it){
+                       HoroscopeDetailStatus.Cargando -> LoadingState()
+                       is HoroscopeDetailStatus.Error -> errorState()
+                       is HoroscopeDetailStatus.Success -> SuccessState()
+                   }
+               }
+        }
+    }
+    }
+
+    private fun LoadingState(){
+        binding.progressbar.isActivated = true
+    }
+    private  fun errorState(){
+        binding.progressbar.isActivated = false
+    }
+    private fun SuccessState(){
+        binding.progressbar.isActivated = false
+    }
+
+
     }

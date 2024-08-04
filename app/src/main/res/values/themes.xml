@@ -4,7 +4,25 @@
     <style name="Theme.PruenbaInterfaces" parent="android:Theme.Material.Light.NoActionBar" />
     <!-- Base application theme. -->
     <style name="Base.Theme.PruenbaInterfaces" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/Yonkatsu</item>
+    </style>
+
+    <style name="NombreHoroscopus">
+        <item name="android:textColor">@color/Mitsu</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+    </style>
+    <style name="Titulo">
+        <item name="android:textColor">@color/Hitotsu</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+    </style>
+
+    <style name="Parrafos" parent="Titulo">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16dp</item>
     </style>
 </resources>
