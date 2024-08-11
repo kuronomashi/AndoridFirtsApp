@@ -4,7 +4,7 @@ import com.example.pruenbainterfaces.R
 
 sealed class oroscopuesinformation(val Imagen:Int,val name:Int){
     data object Aries : oroscopuesinformation(R.drawable.aries, R.string.Aries)
-    data object Tauro : oroscopuesinformation(R.drawable.tauro, R.string.Tauro)
+    data object Taurus : oroscopuesinformation(R.drawable.tauro, R.string.Tauro)
     data object Geminis : oroscopuesinformation(R.drawable.geminis, R.string.Geminis)
     data object Cancer : oroscopuesinformation(R.drawable.cancer, R.string.Cancer)
     data object Leo : oroscopuesinformation(R.drawable.leo, R.string.Leo)

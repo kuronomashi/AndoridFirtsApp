@@ -9,14 +9,13 @@ import kotlinx.coroutines.flow.StateFlow
 import javax.inject.Inject
 
 @HiltViewModel
-class OroscopusViewModel @Inject constructor() : ViewModel(){
+class OroscopusViewModel @Inject constructor(HoroscopoProvider: HoroscopoProvider) : ViewModel(){
 
-    val provider:HoroscopoProvider= HoroscopoProvider()
     private var _horoscope = MutableStateFlow<List<oroscopuesinformation>>(emptyList())
     val horoscope:StateFlow<List<oroscopuesinformation>> = _horoscope
 
     init {
-        _horoscope.value = provider.getOroscopusInfo()
+        _horoscope.value = HoroscopoProvider.getOroscopusInfo()
     }
 
 }

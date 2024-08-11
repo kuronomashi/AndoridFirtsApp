@@ -2,7 +2,7 @@ package com.example.pruenbainterfaces.Dominio.model
 
 enum class HoroscopoModelo {
     Aries,
-    Tauro,
+    Taurus,
     Geminis,
     Cancer,
     Leo,

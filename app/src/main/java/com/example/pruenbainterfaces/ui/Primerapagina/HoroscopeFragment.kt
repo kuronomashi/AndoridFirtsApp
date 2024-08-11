@@ -51,7 +51,7 @@ class HoroscopeFragment : Fragment() {
                     Libra -> HoroscopoModelo.Libra
                     Piscis -> HoroscopoModelo.Piscis
                     Sagitario -> HoroscopoModelo.Sagitario
-                    Tauro -> HoroscopoModelo.Tauro
+                    Taurus -> HoroscopoModelo.Taurus
                     Virgo -> HoroscopoModelo.Virgo
                 }
                 findNavController().navigate(

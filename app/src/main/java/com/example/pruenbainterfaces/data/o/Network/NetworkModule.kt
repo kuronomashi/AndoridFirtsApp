@@ -15,7 +15,7 @@ import javax.inject.Singleton
 object NetworkModule {
     @Provides
     @Singleton
-    private fun Provideretrofit(): Retrofit {
+    fun provideRetrofit(): Retrofit {
        return Retrofit
            .Builder()
             .baseUrl("https://newastro.vercel.app/")
@@ -24,12 +24,12 @@ object NetworkModule {
     }
 
     @Provides
-    private fun ProvideretrofitApi(retrofit: Retrofit): HoroscopeAppService {
+    fun provideHoroscopeApiService(retrofit: Retrofit): HoroscopeAppService {
         return retrofit.create(HoroscopeAppService::class.java)
     }
 
     @Provides
-    private fun ProvideretrofitRepository(apiservice: HoroscopeAppService): Repository {
+    fun provideRepository(apiservice: HoroscopeAppService): Repository {
         return RepositoryImPl(apiservice)
     }
 

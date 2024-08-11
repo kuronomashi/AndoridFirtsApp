@@ -1,7 +1,10 @@
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.safe.agree)
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -46,17 +49,21 @@ android {
 
     packaging {
         resources {
-            excludes += "META-INF/AL2.0,LGPL2.1"
+            excludes += "/META-INF/gradle/incremental.annotation.processors"
         }
     }
     kotlinOptions {
         jvmTarget = "17"
     }
+    kapt{
+        correctErrorTypes = true
+    }
 
 }
 
 dependencies {
-
+    implementation("com.google.dagger:hilt-android:2.52")
+    kapt ("com.google.dagger:hilt-android-compiler:2.52")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -71,11 +78,11 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.activity)
-    implementation(libs.dagger.hilt.android)
-    implementation(libs.hilt.android.gradle.plugin)
     implementation(libs.retrofit)
     implementation(libs.gson)
     implementation(libs.converter.gson)
+    //implementation(libs.hilt.android)
+    //implementation(libs.hilt.android.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -4,11 +4,11 @@ import com.example.pruenbainterfaces.Dominio.model.oroscopuesinformation
 import com.example.pruenbainterfaces.Dominio.model.oroscopuesinformation.*
 import javax.inject.Inject
 
-class HoroscopoProvider {
+class HoroscopoProvider @Inject constructor() {
     fun getOroscopusInfo(): List<oroscopuesinformation> {
         return listOf(
             Aries,Aries,
-            Tauro,
+            Taurus,
             Geminis,
             Cancer,
             Leo,
