@@ -41,16 +41,16 @@ class HoroscopeFragment : Fragment() {
         HoroscopoAdpater = orcopusadaptater(
             onItemSelected = {
                 val type: HoroscopoModelo = when (it) {
-                    Acuario -> HoroscopoModelo.Acuario
+                    Aquarius -> HoroscopoModelo.Aquarius
                     Aries -> HoroscopoModelo.Aries
                     Cancer -> HoroscopoModelo.Cancer
-                    Capricornio -> HoroscopoModelo.Capricornio
-                    Escorpio -> HoroscopoModelo.Escorpio
-                    Geminis -> HoroscopoModelo.Geminis
+                    Capricorn -> HoroscopoModelo.Capricorn
+                    Scorpio -> HoroscopoModelo.Scorpio
+                    Gemini -> HoroscopoModelo.Gemini
                     Leo -> HoroscopoModelo.Leo
                     Libra -> HoroscopoModelo.Libra
-                    Piscis -> HoroscopoModelo.Piscis
-                    Sagitario -> HoroscopoModelo.Sagitario
+                    Pisces -> HoroscopoModelo.Pisces
+                    Sagittarius -> HoroscopoModelo.Sagittarius
                     Taurus -> HoroscopoModelo.Taurus
                     Virgo -> HoroscopoModelo.Virgo
                 }

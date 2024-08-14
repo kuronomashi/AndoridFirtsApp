@@ -64,6 +64,8 @@ android {
 dependencies {
     implementation("com.google.dagger:hilt-android:2.52")
     kapt ("com.google.dagger:hilt-android-compiler:2.52")
+
+    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -81,8 +83,6 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.gson)
     implementation(libs.converter.gson)
-    //implementation(libs.hilt.android)
-    //implementation(libs.hilt.android.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

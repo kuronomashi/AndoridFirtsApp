@@ -9,16 +9,16 @@ class HoroscopoProvider @Inject constructor() {
         return listOf(
             Aries,Aries,
             Taurus,
-            Geminis,
+            Gemini,Gemini,
             Cancer,
             Leo,
             Virgo,
             Libra,
-            Escorpio,
-            Sagitario,
-            Capricornio,
-            Acuario,
-            Piscis
+            Scorpio,
+            Sagittarius,
+            Capricorn,
+            Aquarius,
+            Pisces
         )
     }
 }
